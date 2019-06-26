@@ -1,3 +1,5 @@
+import { SystemConst } from './const';
+
 interface DataStore {
   getConnection():void;
   getNameById(id: number);
@@ -11,10 +13,10 @@ class MysqlStrategy implements DataStore {
     var mysql = require('mysql');
     this.util = require('util');
     this.pool = mysql.createPool({
-      host     : 'localhost',
-      user     : 'shinoda',
-      password : 'shinodapass',
-      database : 'graphql'
+      host     : SystemConst.MYSQL_HOST,
+      user     : SystemConst.MYSQL_USER,
+      password : SystemConst.MYSQL_PASSWORD,
+      database : SystemConst.MYSQL_DATABASE_NAME,
     });
   }
   async getNameById(id: number) {
