@@ -3,3 +3,6 @@
 .directory
 .Trash-*
 .nfs*
+node_modules/*
+dist/*
+

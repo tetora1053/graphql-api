@@ -49,7 +49,7 @@ class DataManager {
   }
 }
 
-const data_manager = new DataManager(new RedisStrategy());
+const data_manager = new DataManager(new MysqlStrategy());
 /*
 (async function () {
   console.log('name:', await data_manager.getNameById(2));
